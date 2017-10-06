@@ -4,13 +4,11 @@
 <h2>Pirate height: <%= @pirate.height %></h2>
 
 
-<h2>Display your first ship here</h2>
-<h2>Ship 1 name: <%= @ships[0].name %></h2>
-<h2>Ship 1 type: <%= @ships[0].type %></h2>
-<h2>Ship 1 booty: <%= @ships[0].booty %></h2>
-
-
-<h2>Display your second ship here</h2>
-<h2>Ship 2 name: <%= @ships[1].name %></h2>
-<h2>Ship 2 type: <%= @ships[1].type %></h2>
-<h2>Ship 2 booty: <%= @ships[1].booty %></h2>
+<h1>Ships</h1>
+<% @ships.each do |ship| %>
+  <div class="ship">
+    <p>Name: <%= ship.name %></p><br>
+    <p>Type: <%= ship.type %></p><br>
+    <p>Booty: <%= ship.booty %></p>
+  </div><br>
+<% end %>
